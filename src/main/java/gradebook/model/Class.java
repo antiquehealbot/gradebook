@@ -16,7 +16,6 @@ public class Class {
     public Class(List<Section> sections) {
         this.sections = sections;
         classAverage = classAverage(sections);
-        classLetterGrade = classLetterGrade(classAverage);
     }
 
     private double classAverage(List<Section> sections) {

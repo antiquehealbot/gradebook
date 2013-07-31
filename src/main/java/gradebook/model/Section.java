@@ -16,7 +16,6 @@ public class Section {
     public Section(List<Student> students) {
         this.students = students;
         this.sectionAverage = sectionAverage(students);
-        this.sectionLetterGrade = sectionLetterGrade(sectionAverage);
         this.sectionSize = students.size();
     }
 
