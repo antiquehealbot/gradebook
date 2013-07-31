@@ -1,9 +1,14 @@
+package gradebook.model;
 
-public class GradingScheme{
+/**
+  * Representing a GradingScheme object, leaving as an interface
+  * open for extension and modification for users
+  */
 
-    public GradingScheme(){
-        
-    }
+public interface GradingScheme {
 
-   
+    double calAvgDroppingLowestScore();
+
+    double calAvgReplacingLowestScore();
+
 }
