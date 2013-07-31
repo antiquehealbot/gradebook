@@ -25,7 +25,6 @@ public class Course {
         this.courseName = courseName;
         this.courseNumber = courseNumber;
         this.courseAverage = setCourseAverage();
-        this.courseLetterGrade = setCourseLetterGrade();
     }
 
     private double setCourseAverage() {
