@@ -5,7 +5,8 @@ import java.util.List;
 /**
   * Representing a Class object
   *
-  *
+  * Implements the Composite Design Pattern.
+  * In the part-whole hierarchies, it plays role of "part".
   */
 public class Class {
 

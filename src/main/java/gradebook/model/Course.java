@@ -5,6 +5,8 @@ import java.util.List;
 /**
   * Representing a Course object
   *
+  * Implements the Composite Design Pattern.
+  * In the part-whole hierarchies, it plays role of "whole".
   */
 
 public class Course {

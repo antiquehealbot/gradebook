@@ -4,6 +4,9 @@ import java.util.List;
 
 /**
   * Representing a Section object
+  *
+  * Implements the Composite Design Pattern.
+  * In the part-whole hierarchies, it plays role of "part".
   */
 
 public class Section {
