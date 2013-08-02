@@ -12,13 +12,12 @@ import java.util.List;
 public class Section {
 
     private List<Student> students;
-    private char sectionLetterGrade;
-    private double sectionAverage;
     private int sectionSize;
     private GradingScheme gradingScheme;
 
     public Section(List<Student> students, GradingScheme gradingScheme) {
         this.students = students;
+        this.gradingScheme = gradingScheme;
         this.sectionSize = students.size();
     }
 
@@ -32,13 +31,5 @@ public class Section {
 
     public int getSectionSize() {
         return sectionSize;
-    }
-
-    public double getSectionAverage() {
-        return sectionAverage;
-    }
-
-    public char getSectionLetterGrade() {
-        return sectionLetterGrade;
     }
 }

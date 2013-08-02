@@ -1,6 +1,6 @@
 package gradebook.model;
 
-import java.util.Hashtable;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -41,8 +41,7 @@ public class GradingScheme {
     double reportClassAverage(List<Section> sections) {
         double average = 0;
         for (Section section: sections) {
-            average += section.reportSectionAverage()
-                * section.getSectionSize();
+            average += section.reportSectionAverage();
         }
         if (average > 0) {
             return average / sections.size();
@@ -81,23 +80,20 @@ public class GradingScheme {
         }
     }
 
-    double reportStudentScore(
-            Hashtable<GradebookCategory, List<GradebookItem>> gradebook) {
+    double reportStudentScore(Collection<GradebookItem>
+            gradebookItems) {
         double score = 0;
-        for (GradebookCategory key: gradebook.keySet()) {
-            double partialScore = 0;
-            for (GradebookItem element: gradebook.get(key)) {
-                partialScore += element.getScore();
-            }
-            score += partialScore * key.getWeight();
+        for (GradebookItem item:gradebookItems) {
+            score += item.getScore()
+                * (item.getGradebookCategory()).getWeight();
         }
         return score;
     }
 
     char reportStudentLetterGrade(
-            Hashtable<GradebookCategory, List<GradebookItem>> gradebook,
+            Collection<GradebookItem> gradebookItems,
             double pass) {
-        double score = reportStudentScore(gradebook);
+        double score = reportStudentScore(gradebookItems);
         if (score >= pass) {
             return 'S';
         } else {

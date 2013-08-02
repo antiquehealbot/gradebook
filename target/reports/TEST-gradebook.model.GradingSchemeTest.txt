@@ -1,0 +1,38 @@
+Testsuite: gradebook.model.GradingSchemeTest
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 sec
+
+Testcase: testReportSecitonAverage1 took 0.002 sec
+Testcase: testReportSecitonAverage3 took 0 sec
+Testcase: testReportClassLetterGrade1 took 0 sec
+Testcase: testReportClassLetterGrade2 took 0 sec
+Testcase: testReportClassLetterGrade3 took 0 sec
+Testcase: testReportClassLetterGrade4 took 0 sec
+Testcase: testReportClassLetterGrade5 took 0 sec
+Testcase: testReportClassLetterGrade6 took 0 sec
+Testcase: testReportClassAverage1 took 0 sec
+Testcase: testReportClassAverage2 took 0 sec
+Testcase: testReportClassAverage3 took 0 sec
+Testcase: testReportClassAverage4 took 0 sec
+Testcase: testReportCourseAverage1 took 0 sec
+Testcase: testReportCourseAverage2 took 0 sec
+Testcase: testReportCourseLetterGrade1 took 0 sec
+Testcase: testReportCourseLetterGrade2 took 0.001 sec
+Testcase: testReportCourseLetterGrade3 took 0 sec
+Testcase: testReportLetterGrade1 took 0 sec
+Testcase: testReportLetterGrade2 took 0 sec
+Testcase: testReportLetterGrade3 took 0 sec
+Testcase: testReportLetterGrade4 took 0 sec
+Testcase: testReportSectionLetterGrade1 took 0 sec
+Testcase: testReportSectionLetterGrade2 took 0 sec
+Testcase: testReportSectionLetterGrade3 took 0 sec
+Testcase: testReportSectionLetterGrade4 took 0.001 sec
+Testcase: testReportScore1 took 0 sec
+Testcase: testReportScore2 took 0 sec
+Testcase: testReportScore3 took 0 sec
+Testcase: testReportScore4 took 0 sec
+Testcase: testGetSectionSize1 took 0 sec
+Testcase: testGetSectionSize2 took 0 sec
+Testcase: testGetSectionSize3 took 0 sec
+Testcase: testGetSectionSize4 took 0 sec
+Testcase: testReportSectionAverage2 took 0 sec
+Testcase: testReportSectionAverage4 took 0 sec
