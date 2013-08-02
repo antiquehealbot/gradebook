@@ -21,5 +21,4 @@ public class GradebookCategory {
     public double getWeight() {
         return weight;
     }
-
 }

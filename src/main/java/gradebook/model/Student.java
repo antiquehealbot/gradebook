@@ -17,53 +17,43 @@ public class Student {
     private String name;
     private GradingScheme gradingScheme;
     private Hashtable<GradebookCategory, List<GradebookItem>>
-            gradebookCategories;
+            gradebook;
     private Collection<GradebookItem> gradebookItems;
-    private double score;
-    private char letterGrade;
 
-    public Student(String name) {
+    public Student(String name, Collection<GradebookItem> gradebookItems,
+            GradingScheme gradingScheme) {
         this.name = name;
-    }
-
-    public Student(String name, GradingScheme gradingScheme) {
-        this(name);
-        this.gradingScheme = gradingScheme;
-    }
-
-    public Student(String name, Collection<GradebookItem> gradebookItems) {
-        this(name);
         this.gradebookItems = gradebookItems;
+        this.gradingScheme = gradingScheme;
         setGradebookCategories(gradebookItems);
     }
 
-    public void setGradingScheme(GradingScheme gradingScheme) {
-        this.gradingScheme = gradingScheme;
+    public double reportScore() {
+        return gradingScheme.reportStudentScore(gradebook);
     }
 
-    public void setGradebookItems(Collection<GradebookItem> gradebookItems) {
-        this.gradebookItems = gradebookItems;
-        setGradebookCategories(gradebookItems);
+    public char reportLetterGrade(int pass) {
+        return gradingScheme.reportStudentLetterGrade(gradebook, pass);
     }
 
-    public double getScore() {
-        return score;
+    public Hashtable<GradebookCategory, List<GradebookItem>> getGradebook() {
+        return this.gradebook;
     }
 
     private void setGradebookCategories(Collection<GradebookItem>
                 gradebookItems) {
-        this.gradebookCategories =
+        this.gradebook =
                 new Hashtable<GradebookCategory, List<GradebookItem>>();
         for (GradebookItem item:gradebookItems) {
             GradebookCategory category = item.getGradebookCategory();
-            if (!gradebookCategories.keySet().contains(category)) {
+            if (!gradebook.keySet().contains(category)) {
                 List<GradebookItem> value = new ArrayList<GradebookItem>();
                 value.add(item);
-                gradebookCategories.put(item.getGradebookCategory(), value);
+                gradebook.put(item.getGradebookCategory(), value);
             } else {
-                List<GradebookItem> value = gradebookCategories.get(item);
+                List<GradebookItem> value = gradebook.get(item);
                 value.add(item);
-                gradebookCategories.put(item.getGradebookCategory(), value);
+                gradebook.put(item.getGradebookCategory(), value);
             }
         }
     }

@@ -15,31 +15,30 @@ public class Section {
     private char sectionLetterGrade;
     private double sectionAverage;
     private int sectionSize;
+    private GradingScheme gradingScheme;
 
-    public Section(List<Student> students) {
+    public Section(List<Student> students, GradingScheme gradingScheme) {
         this.students = students;
-        this.sectionAverage = sectionAverage(students);
         this.sectionSize = students.size();
     }
 
-    private double sectionAverage(List<Student> students) {
-        double sum = 0;
-        double average = 0;
-        if (students.size() > 0) {
-            for (Student student:students) {
-                sum += student.getScore();
-            }
-            average = sum / students.size();
-        }
-        return average;
+    public double reportSectionAverage() {
+        return gradingScheme.reportSectionAverage(students);
     }
 
-    public double getSectionAverage() {
-        return sectionAverage;
+    public char reportSectionLetterGrade(double pass) {
+        return gradingScheme.reportSectionLetterGrade(students, pass);
     }
 
     public int getSectionSize() {
         return sectionSize;
     }
 
+    public double getSectionAverage() {
+        return sectionAverage;
+    }
+
+    public char getSectionLetterGrade() {
+        return sectionLetterGrade;
+    }
 }

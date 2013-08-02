@@ -1,2 +1,7 @@
 Starting audit...
+C:\Users\Owen\CS2340\gradebook\src\main\java\gradebook\model\GradebookCategory.java:0: File does not end with a newline.
+C:\Users\Owen\CS2340\gradebook\src\main\java\gradebook\model\GradebookItem.java:0: File does not end with a newline.
+C:\Users\Owen\CS2340\gradebook\src\main\java\gradebook\model\GradingScheme.java:0: File does not end with a newline.
+C:\Users\Owen\CS2340\gradebook\src\main\java\gradebook\model\Section.java:0: File does not end with a newline.
+C:\Users\Owen\CS2340\gradebook\src\main\java\gradebook\model\Student.java:0: File does not end with a newline.
 Audit done.

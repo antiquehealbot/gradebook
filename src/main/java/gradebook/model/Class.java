@@ -11,34 +11,18 @@ import java.util.List;
 public class Class {
 
     private List<Section> sections;
-    private char classLetterGrade;
-    private double classAverage;
+    private GradingScheme gradingScheme;
 
-    public Class(List<Section> sections) {
+    public Class(List<Section> sections, GradingScheme gradingScheme) {
         this.sections = sections;
-        classAverage = classAverage(sections);
+        this.gradingScheme = gradingScheme;
     }
 
-    private double classAverage(List<Section> sections) {
-        double sum = 0;
-        int numOfStudents = 0;
-        double average = 0;
-        if (sections.size() != 0) {
-            for (Section section:sections) {
-                sum += section.getSectionAverage() * section.getSectionSize();
-                numOfStudents += section.getSectionSize();
-            }
-            average = sum / numOfStudents;
-        }
-        return average;
+    public double reportClassAverage() {
+         return gradingScheme.reportClassAverage(sections);
     }
 
-    public double getClassAverage() {
-        return classAverage;
+    public char reportClassLetterGrade(double pass) {
+        return gradingScheme.reportClassLetterGrade(sections, pass);
     }
-
-    public char getClassLetterGrade() {
-        return classLetterGrade;
-    }
-
 }
